@@ -14,4 +14,4 @@ let nominalSchema = mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('nominal', nominalSchema)
+module.exports = mongoose.model('Nominal', nominalSchema)
