@@ -1,6 +1,6 @@
-<%- include ../../partials/header.ejs %>
-  <%- include ../../partials/navbar.ejs %>
-    <%- include ../../partials/sidebar.ejs %>
+<%- include ../../partial/header.ejs %>
+  <%- include ../../partial/navbar.ejs %>
+    <%- include ../../partial/sidebar.ejs %>
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
@@ -81,8 +81,8 @@
                         <label for="image">Gambar</label>
                         <input type="file" name="image" class="form-control" id="image" placeholder="Masukan gambar">
                         <br>
-                        <img id="perview" alt="test"
-                          src="https://bwa-storegg.herokuapp.com/uploads/<%= voucher.thumbnial %>">
+                        <img id="perview" alt="test" width="50%" height="50%"
+                          src="http://localhost:3000/uploads/<%= voucher.thumbnial %>">
                       </div>
                     </div>
                     <div class="card-footer">
@@ -100,7 +100,7 @@
         <!-- /.content -->
       </div>
 
-      <%- include ../../partials/footer.ejs %>
-        <%- include ../../partials/js.ejs %>
+      <%- include ../../partial/footer.ejs %>
+        <%- include ../../partial/js.ejs %>
 
           </script>
