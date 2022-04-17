@@ -92,7 +92,7 @@ module.exports = {
     } catch (err) {
       req.flash('alertMessage', `${err.message}`)
       req.flash('alertStatus', 'danger')
-      res.redirect('/nominal')
+      res.redirect('/voucher')
     }
   },
   viewEdit: async(req, res)=> {
