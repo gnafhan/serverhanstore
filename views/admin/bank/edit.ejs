@@ -1,0 +1,69 @@
+<%- include ../../partial/header.ejs %>
+<%- include ../../partial/navbar.ejs %>
+<%- include ../../partial/sidebar.ejs %>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Kategori</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item "><a href="/category">Bank</a></li>
+              <li class="breadcrumb-item active">Ubah</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                  <h3 class="card-title">Form Ubah Bank "<%= bank.name %>"</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form action="/bank/edit/<%= bank._id %>?_method=PUT" method="post">
+                  <div class="card-body">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="name">Nama pemilik</label>
+                            <input type="text" value="<%= bank.name %>" name='name' class="form-control" id="name" placeholder="Masukkan nama pemilik" required>
+                          </div>
+                      <div class="form-group">
+                      <label for="nameBank">Nama bank</label>
+                      <input type="text" value="<%= bank.nameBank %>" name='nameBank' class="form-control" id="nameBank" placeholder="Masukkan nama bank" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="noRekening">Masukan no rekening</label>
+                      <input type="number" value="<%= bank.noRekening %>" name='noRekening' class="form-control" id="noRekening" placeholder="Masukkan no rekening" required>
+                    </div>
+                    </div>
+                    
+                  </div>
+                  <!-- /.card-body -->
+  
+                  <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                  </div>
+                </form>
+              </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+
+  <%- include ../../partial/footer.ejs %>
+  <%- include ../../partial/js.ejs %>
