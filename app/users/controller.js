@@ -10,7 +10,8 @@ module.exports = {
         const alert = {message: alertMessage, status: alertStatus}
         if (req.session.user === null || req.session.user === undefined) {
             res.render('admin/users/view_signin',{
-                alert
+                alert,
+               title:'Halaman Sign In'
                 })
             
         }else {
@@ -65,5 +66,9 @@ module.exports = {
             req.flash('alertStatus', 'danger')
             res.redirect('/')
         }
+        },
+        actionLogOut: (req, res) => {
+            req.session.destroy();
+            res.redirect('/')
         }
     }
