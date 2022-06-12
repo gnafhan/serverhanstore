@@ -4,7 +4,7 @@ let nominalSchema = mongoose.Schema({
         type : String,
         require : [true, 'nama pemilik harus diisi']
     },
-    nameBank : {
+    bankName : {
         type : String,
         require : [true, 'nama Bank harus diisi']
     },
